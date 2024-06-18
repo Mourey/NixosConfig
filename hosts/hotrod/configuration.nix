@@ -5,7 +5,7 @@ in
   imports =
     [
       ./hardware-configuration.nix
-      ../../nix/default.nix
+      ./../../nixosModules/default.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -17,7 +17,7 @@ in
   };
 
   system = {
-    stateVersion = "23.11";
+    stateVersion = "24.05";
   };
 
   nixpkgs = {

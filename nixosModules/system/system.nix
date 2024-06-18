@@ -3,6 +3,6 @@
   nixpkgs.config.allowUnfree = true;
 
   system = {
-    stateVersion = "23.11";
+    stateVersion = "24.05";
   };
 }
