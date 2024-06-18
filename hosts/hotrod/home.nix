@@ -22,6 +22,7 @@ in
     packages = with pkgs; [
       libappindicator-gtk3
       libdbusmenu-gtk3
+      bash-language-server
 
     ];
 
