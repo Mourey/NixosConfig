@@ -1,16 +1,16 @@
 { pkgs, ... }:
 
 let
-  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
+  startupScript = pkgs.writeShellScriptBin "start" ''
     ${pkgs.ags}/bin/ags &
     ${pkgs.ags}/bin/swww init &
-    
   '';
 in
 {
   wayland.windowManager.hyprland = {
+    enable = true;
     settings = {
-      exec-once = ''${startupScript}/bin/start'';
+      exec-once = "${startupScript}/bin/start";
     };
   };
 }
