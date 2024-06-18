@@ -1,11 +1,11 @@
 { pkgs, inputs, ... }:
 let
-  starshipToml = builtins.readFile ../../modules/nixos/custom/starship.toml;
+  starshipToml = builtins.readFile ./nix/custom/starship.toml;
 in
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    ../../modules/homemanager/default.nix
+    ../homemanager/default.nix
     inputs.ags.homeManagerModules.default
     inputs.hyprland.homeManagerModules.default
   ];
