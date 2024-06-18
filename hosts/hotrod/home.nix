@@ -4,8 +4,8 @@ let
 in
 {
   imports = [
-    #inputs.nixvim.homeManagerModules.nixvim
-    #../../homemanager/default.nix
+    inputs.nixvim.homeManagerModules.nixvim
+    ./../../homemanagerModules/default.nix
     inputs.ags.homeManagerModules.default
     inputs.hyprland.homeManagerModules.default
   ];
