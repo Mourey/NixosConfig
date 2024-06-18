@@ -26,6 +26,8 @@ in
       inputs.neorg-overlay.overlays.default
     ];
 
+
+
     config = {
       allowUnfree = true;
     };
