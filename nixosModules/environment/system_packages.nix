@@ -49,6 +49,7 @@
       podman-tui
       protonvpn-gui
       wireguard-tools
+      snowsql
 
       # System Monitoring
       btop
