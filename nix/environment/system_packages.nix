@@ -93,13 +93,10 @@
       lua
       lua-language-server
       meson
-      neovim
       nixfmt-classic
       nixfmt-rfc-style
       nixpkgs-fmt
       python3
-      rustc
-      rustup
       stylua
       tomlplusplus
       vim
