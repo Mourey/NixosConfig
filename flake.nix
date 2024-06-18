@@ -96,23 +96,28 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: builtins.trace "Starting outputs evaluation" {
-    packages.x86_64-linux.default = builtins.trace "Setting default package" (nixpkgs.legacyPackages.x86_64-linux.callPackage ./modules/homemanager/programs/ags { inherit inputs; });
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    packages.x86_64-linux.default = nixpkgs.legacyPackages.x86_64-linux.callPackage ./homemanager/programs/ags { inherit inputs; };
 
-    nixosConfigurations = builtins.trace "Setting nixosConfigurations" {
-      "nixos" = builtins.trace "Configuring nixos system" (nixpkgs.lib.nixosSystem {
+    nixosConfigurations = {
+      "nixos" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = builtins.trace "Setting specialArgs" {
+        specialArgs = {
           inherit inputs;
           asztal = self.packages.x86_64-linux.default;
         };
-        modules = builtins.trace "Setting modules" [
+        modules = [
           ./hosts/hotrod/configuration.nix
-          inputs.home-manager.nixosModules.default
+          home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
           inputs.nix-index-database.nixosModules.nix-index
         ];
-      });
+
+        # Apply custom overlay
+        nixpkgs.overlays = [
+          (import ./overlay.nix)
+        ];
+      };
     };
   };
 }
