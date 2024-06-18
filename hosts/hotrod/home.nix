@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }:
 let
-  starshipToml = builtins.readFile ./nixosModules/custom/starship.toml;
+  starshipToml = builtins.readFile ../../nixosModules/custom/starship.toml;
 in
 {
   imports = [

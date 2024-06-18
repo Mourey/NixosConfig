@@ -101,7 +101,6 @@
       tomlplusplus
       vim
       rustc
-      rust
       rust-analyzer
       cargo
 
