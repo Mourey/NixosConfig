@@ -4,6 +4,7 @@
     systemPackages = with pkgs; [
       # System Utilities
       accountsservice
+      starship
       brightnessctl
       cliphist
       conjure
@@ -31,6 +32,10 @@
       wl-clipboard
       xclip
       xsel
+      rofi-wayland
+      lazygit
+      lazydocker
+      rPackages.lazysql
 
       # Communication Tools
       blueman
@@ -105,7 +110,7 @@
       cargo
 
       # Terminal Emulators
-      # alacritty
+      alacritty
       kitty
       # wezterm
 

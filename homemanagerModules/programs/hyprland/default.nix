@@ -1,8 +1,6 @@
 { ... }:
 {
-
   imports = [
-
     # General Hyprlnad Configuartion
     ./start.nix
     ./animations.nix
@@ -15,7 +13,6 @@
     ./master.nix
     ./monitor_layout.nix
     ./programs.nix
-
     # Import Hypland Plugins
     ./plugins/default.nix
   ];
