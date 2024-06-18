@@ -38,8 +38,6 @@
           };
           rust-analyzer = {
             enable = true;
-            installCargo = true;
-            installRustc = true;
           };
           pyright.enable = true;
           nixd.enable = true;
