@@ -4,8 +4,8 @@ let
 in
 {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-    ../../homemanager/default.nix
+    #inputs.nixvim.homeManagerModules.nixvim
+    #../../homemanager/default.nix
     inputs.ags.homeManagerModules.default
     inputs.hyprland.homeManagerModules.default
   ];
@@ -13,7 +13,7 @@ in
   home = {
     username = "hotrod";
     homeDirectory = "/home/hotrod";
-    stateVersion = "23.11";
+    stateVersion = "24.05";
 
     file.".config/starship.toml" = {
       text = starshipToml;
