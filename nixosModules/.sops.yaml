@@ -1,7 +1,0 @@
-keys:
-  - &hotrod age1nh6w2wny2jpmlsa63t8xc2q5pn6ftpdj0m5e8rfw9dlehsw5wpsqrf05qq 
-creation_rules:
-  - path_regex: secrets/secrets.yaml$
-    key_groups:
-    - age:
-      - *hotrod

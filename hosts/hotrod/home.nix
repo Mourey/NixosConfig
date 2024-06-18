@@ -5,7 +5,7 @@ in
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    ../homemanager/default.nix
+    ../../homemanager/default.nix
     inputs.ags.homeManagerModules.default
     inputs.hyprland.homeManagerModules.default
   ];
@@ -30,5 +30,10 @@ in
     };
   };
 
-  nixpkgs.overlays = [ inputs.neorg-overlay.overlays.default ];
+  nixpkgs = {
+    overlays = [ inputs.neorg-overlay.overlays.default ];
+    config = {
+      allowUnfree = true;
+    };
+  };
 }
