@@ -1,6 +1,5 @@
 { inputs, ... }:
 let
-  username = "hotrod";
 in
 {
   imports =
@@ -25,8 +24,6 @@ in
     overlays = [
       inputs.neorg-overlay.overlays.default
     ];
-
-
 
     config = {
       allowUnfree = true;
