@@ -17,7 +17,6 @@
       GDK_SCALE = "1";
       PANGOCAIRO_BACKEND = "fontconfig";
       FONTCONFIG_FILE = "/etc/fonts/fonts.conf";
-      RUST_BACKTRACE = "1";
     };
 
   };
