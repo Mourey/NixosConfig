@@ -112,7 +112,6 @@
         ];
       };
 
-      homeManagerModules.default = ./homeManagerModules;
     };
   };
 }
