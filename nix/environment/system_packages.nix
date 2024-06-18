@@ -100,6 +100,10 @@
       stylua
       tomlplusplus
       vim
+      rustc
+      rust
+      rust-analyzer
+      cargo
 
       # Terminal Emulators
       # alacritty

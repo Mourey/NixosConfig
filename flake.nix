@@ -69,10 +69,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     sops-nix = {
       url = "github:Mic92/sops-nix";
@@ -97,25 +97,17 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    packages.x86_64-linux.default = nixpkgs.legacyPackages.x86_64-linux.callPackage ./homemanager/programs/ags { inherit inputs; };
-
     nixosConfigurations = {
       "nixos" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs;
-          asztal = self.packages.x86_64-linux.default;
         };
         modules = [
           ./hosts/hotrod/configuration.nix
           home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
           inputs.nix-index-database.nixosModules.nix-index
-        ];
-
-        # Apply custom overlay
-        nixpkgs.overlays = [
-          (import ./overlay.nix)
         ];
       };
     };
