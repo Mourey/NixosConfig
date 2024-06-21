@@ -1,6 +1,6 @@
 { pkgs }:
 let
-  imgLink = "https://YOURIMAGELINK/image.png";
+  imgLink = "https://github.com/Mourey/NixosConfig/blob/main/Images/nature-3719233.jpg";
 
   image = pkgs.fetchurl {
     url = imgLink;
