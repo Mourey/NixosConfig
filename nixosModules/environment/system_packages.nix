@@ -36,6 +36,7 @@
       lazygit
       lazydocker
       rPackages.lazysql
+      tree
 
       # Communication Tools
       blueman
