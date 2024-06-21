@@ -2,6 +2,8 @@
   imports = [
     ./hyprland/default.nix
     ./neomutt/default.nix
+    ./neovim/default.nix
+    ./firefox/default.nix
   ];
 
   home.packages = with pkgs; [
