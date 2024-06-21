@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }: {
   imports = [
     ./hyprland/default.nix
+    ./neomutt/default.nix
   ];
 
   home.packages = with pkgs; [
