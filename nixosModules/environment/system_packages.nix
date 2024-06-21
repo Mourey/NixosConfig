@@ -38,6 +38,9 @@
       rPackages.lazysql
       tree
 
+      libsForQt5.qt5.qtquickcontrols2
+      libsForQt5.qt5.qtgraphicaleffects
+
       # Communication Tools
       blueman
       nchat
