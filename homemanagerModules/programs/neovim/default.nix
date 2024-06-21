@@ -1,6 +1,6 @@
 { ... }:
 {
-  import = [
+  imports = [
     # General
     ./autocmds.nix
     ./colorschemes.nix
