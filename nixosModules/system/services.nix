@@ -5,7 +5,6 @@
       enable = true;
     };
 
-    enable = true;
     displayManager = {
       sddm = {
         enable = true;
