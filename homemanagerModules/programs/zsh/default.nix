@@ -1,13 +1,6 @@
 { ... }: {
   # Nix Index Table integration
   programs = {
-    nix-index = {
-      enable = true;
-      enableBashIntegration = true; # Enable bash integration
-      enableZshIntegration = true; # Enable zsh integration
-    };
-
-    # Disable command-not-found to avoid conflicts
     command-not-found.enable = false;
 
     # Enable zsh as the terminal

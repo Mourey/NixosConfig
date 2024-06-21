@@ -2,6 +2,6 @@
 {
   imports = [
     ./programs/default.nix
-    ./programs.nix
+    ./xdg.nix
   ];
 }

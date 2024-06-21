@@ -4,6 +4,8 @@
     ./neomutt/default.nix
     ./neovim/default.nix
     ./firefox/default.nix
+    ./nix-index/default.nix
+    ./zsh/default.nix
   ];
 
   home.packages = with pkgs; [

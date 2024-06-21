@@ -7,6 +7,7 @@
     ./networking.nix
     ./programs.nix
     ./security.nix
+    ./services.nix
     ./sound.nix
     ./stylix.nix
     ./system.nix
