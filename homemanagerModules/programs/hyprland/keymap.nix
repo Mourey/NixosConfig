@@ -59,7 +59,7 @@
         "$mainMod, mouse_up, workspace, e-1"
 
         "$mainMod, SPACE, exec, rofi -show drun -show-icons"
-
+        "$mainMod, E, exec, dolphin"
       ];
 
       bindm = [
