@@ -8,7 +8,7 @@
     displayManager = {
       sddm = {
         enable = true;
-        theme = "${import ../custom/sddm-theme.nix { inherit pkgs;}}";
+        theme = "${import ../../custom/sddm-theme.nix { inherit pkgs;}}";
         wayland = {
           enable = true;
         };
