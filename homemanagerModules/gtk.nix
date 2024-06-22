@@ -17,9 +17,10 @@ in
         name = "adw-gtk3";
       };
 
-      iconTheme = { };
-      package = gruvboxplus;
-      name = "gruvbox-plus";
+      iconTheme = {
+        package = gruvboxplus;
+        name = "gruvbox-plus";
+      };
     };
 
   home = {
