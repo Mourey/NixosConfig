@@ -37,6 +37,8 @@
       lazydocker
       rPackages.lazysql
       tree
+      python311Packages.conda
+      conda
 
 
       libsForQt5.qt5.qtquickcontrols2
