@@ -55,6 +55,7 @@
       protonvpn-gui
       wireguard-tools
       snowsql
+      distrobox
 
       # System Monitoring
       btop
