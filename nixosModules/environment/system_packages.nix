@@ -15,7 +15,6 @@
       linuxHeaders
       maim
       mpv
-      neofetch
       nerdfonts
       openssh
       pavucontrol
@@ -34,15 +33,49 @@
       xsel
       rofi-wayland
       lazygit
-      lazydocker
       rPackages.lazysql
       tree
       python311Packages.conda
       conda
+      direnv
+      lazydocker
+      clamav
 
+      # hyprland
+      pyprland
+      hyprpicker
+      hyprcursor
+      hyprlock
+      hypridle
+      hyperpaper
+
+
+      # some cools stuff
+      cool-retro-term
+      helix
+      quietbrowser
+      zathura
+      imv
+
+      # info fetcher
+      neofetch
+      onefetch
+      ipfetch
+      cpufetch
+      ramfetch
+      startfetch
+      octofetch
+      htop
+      bottom
+      zfxtop
+      kmon
+      dig
+      speedtest-rs
 
       libsForQt5.qt5.qtquickcontrols2
       libsForQt5.qt5.qtgraphicaleffects
+
+      greetd.tuigreet
 
       # Communication Tools
       blueman
@@ -111,17 +144,21 @@
       nixfmt-rfc-style
       nixpkgs-fmt
       python3
+      (python312Full.withPackages (ps: with ps; [ pygobject3 gobject-introspection pyqt6-sip ]))
+      nodePackages_latest.nodejs
       stylua
       tomlplusplus
       vim
       rustc
       rust-analyzer
-      cargo
+      zig
+      go
+      numbat
+
 
       # Terminal Emulators
-      alacritty
       kitty
-      # wezterm
+      wezterm
 
       # File Managers
       dolphin

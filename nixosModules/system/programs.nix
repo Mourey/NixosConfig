@@ -8,6 +8,11 @@
     };
 
 
+    thunar.enable = true;
+    xfconf.enable = true;
+    direnv.enable = true;
+    dconf.enable = true;
+    fish.enable = true;
     zsh = {
       enable = true;
     };

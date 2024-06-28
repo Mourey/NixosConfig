@@ -2,8 +2,18 @@
 {
   imports = [
     ./bootloader.nix
+    ./clamav-scanner.nix
+    ./dns.nix
     ./fonts.nix
+    ./firewall.nix
+    ./gc.nix
+    ./gnome.nix
     ./hardware.nix
+    ./international.nix
+    ./linux-kernel.nix
+    ./langauge-servers.nix
+    ./mac-random.nix
+    ./nvidia.nix
     ./networking.nix
     ./programs.nix
     ./security.nix
@@ -14,5 +24,17 @@
     ./time.nix
     ./virtualisation.nix
     ./xdg.nix
+    ./screen.nix
+    ./rust.nix
+    ./swap.nix
+    ./security-services.nix
+    ./terminal-utils.nix
+    ./theme.nix
+    ./usb.nix
+    ./utils.nix
+    ./wasm.nix
+    ./vpn.nix
+    ./work.nix
+    #./yubikey.nix
   ];
 }

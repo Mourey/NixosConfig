@@ -1,7 +1,7 @@
 { ... }:
 {
   networking = {
-    hostName = "nixos"; # Define your hostname.
+    hostName = "carryrocks-laptop"; # Define your hostname.
     networkmanager.enable = true;
     firewall = {
       allowedTCPPorts = [ 22 53 ];

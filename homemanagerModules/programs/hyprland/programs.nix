@@ -2,7 +2,7 @@
 {
   wayland.windowManager.hyprland = {
     settings = {
-      "$terminal" = "kitty";
+      "$terminal" = "wezterm";
       "$fileManager" = "dolphin";
       "$menu" = "rofi";
       "$browser" = "firefox";

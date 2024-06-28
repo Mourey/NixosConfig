@@ -5,6 +5,8 @@
     timeZone = "Europe/Madrid";
   };
 
+  hardwareClockInLocalTime = true;
+
   # Select internationalisation properties.
   i18n = {
 
