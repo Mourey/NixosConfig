@@ -7,7 +7,7 @@
     ./fonts.nix
     ./firewall.nix
     ./gc.nix
-    ./gnome.nix
+    #./gnome.nix
     ./hardware.nix
     ./international.nix
     ./linux-kernel.nix
@@ -33,7 +33,7 @@
     ./usb.nix
     ./utils.nix
     ./wasm.nix
-    ./vpn.nix
+    #./vpn.nix
     ./work.nix
     #./yubikey.nix
   ];

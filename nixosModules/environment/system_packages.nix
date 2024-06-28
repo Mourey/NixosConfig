@@ -47,13 +47,13 @@
       hyprcursor
       hyprlock
       hypridle
-      hyperpaper
+      hyprpaper
 
 
       # some cools stuff
       cool-retro-term
       helix
-      quietbrowser
+      qutebrowser
       zathura
       imv
 
@@ -63,7 +63,7 @@
       ipfetch
       cpufetch
       ramfetch
-      startfetch
+      starfetch
       octofetch
       htop
       bottom

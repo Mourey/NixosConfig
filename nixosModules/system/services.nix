@@ -3,14 +3,17 @@
   services = {
     openssh = {
       enable = true;
-      PasswordAuthentication = false;
-      KdbInteractiveAuthentication = false;
-      PermitRootLogin = "no";
-      AllowUsers = [ "hotrod" ];
+      settings = {
+        KbdInteractiveAuthentication = false;
+        PermitRootLogin = "no";
+        AllowUsers = [ "hotrod" ];
+      };
     };
 
     geoclue2.enable = true;
     upower.enable = true;
+
+    power-profiles-daemon.enable = false;
 
     dbus.enable = true;
     dbus.packages = with pkgs; [
@@ -42,7 +45,7 @@
 
     displayManager = {
       sddm = {
-        enable = true;
+        enable = false;
         theme = "${import ../custom/sddm-theme.nix { inherit pkgs;}}";
         wayland = {
           enable = true;
