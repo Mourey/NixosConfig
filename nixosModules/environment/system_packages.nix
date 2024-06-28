@@ -129,7 +129,6 @@
 
       # Programming Languages and Tools
       bun
-      cargo
       cmake
       cpio
       dart-sass
@@ -151,6 +150,8 @@
       vim
       zig
       go
+      cargo
+      rustup
       numbat
 
 

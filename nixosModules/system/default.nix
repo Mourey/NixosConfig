@@ -25,7 +25,7 @@
     ./virtualisation.nix
     ./xdg.nix
     ./screen.nix
-    ./rust.nix
+    #./rust.nix
     ./swap.nix
     ./security-services.nix
     ./terminal-utils.nix
