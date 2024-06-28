@@ -149,8 +149,6 @@
       stylua
       tomlplusplus
       vim
-      rustc
-      rust-analyzer
       zig
       go
       numbat

@@ -36,9 +36,6 @@ in
       libappindicator-gtk3
       libdbusmenu-gtk3
       bash-language-server
-      rustc
-      cargo
-      rust-analyzer
     ];
 
     sessionVariables = {
