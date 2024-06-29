@@ -1,16 +1,17 @@
 { pkgs, inputs, ... }:
 let
   starshipToml = builtins.readFile ../../nixosModules/custom/starship.toml;
+  lazydockerConfig = builtins.readFile ../../nixosModules/custom/lazydocker.yml;
+  crates = builtins.readFile ../../nixosModules/custom/cargo/crates.toml;
+  ssh_config = builtins.readFile ../../nixosModules/custom/ssh/config;
+  gitconfig = builtins.readFile ../../nixosModules/custom/gitconfig;
+  gtkrc2 = builtins.readFile ../../nixosModules/custom/gtkrc-2.0;
 
-
-  lazydockerConfig = ''
-    customCommands:
-      images:
-        - name: zsh
-          attach: true
-          command: "docker run -it --name arch-x --net host --privileged -e DISPLAY=:0 -v /tmp/.X11-unix:/tmp/.X11-unix -v arch_vol:/data -v home_config:/home/hotrod/.config -v project_data:/home/hotrod/projects {{ .Image.Name }} zsh"
+  #icons
+  iconsDir = pkgs.runCommand "icons" { } ''
+    mkdir -p $out
+    cp -r ${./.icons}    $out
   '';
-
 in
 {
   imports = [
@@ -26,20 +27,50 @@ in
     homeDirectory = "/home/hotrod";
     stateVersion = "24.05";
 
-    file.".config/starship.toml" = {
-      text = starshipToml;
+    file = {
+
+      ".config/starship.toml" = {
+        text = starshipToml;
+      };
+
+      ".config/lazydocker/config.yml" = {
+        text = lazydockerConfig;
+      };
+
+      ".cargo/.crates.toml" = {
+        text = crates;
+      };
+
+      ".ssh/config" = {
+        text = ssh_config;
+      };
+
+      ".gitconfig" = {
+        text = gitconfig;
+      };
+
+      ".gtkrc-2.0" = {
+        text = gtkrc2;
+      };
+
+      ".icons" = {
+        source = "${iconsDir}/.icons";
+        recursive = true;
+      };
+
     };
 
-    file.".config/lazydocker/config.yml".text = lazydockerConfig;
 
     packages = with pkgs; [
       libappindicator-gtk3
       libdbusmenu-gtk3
       bash-language-server
+      wezterm
     ];
 
     sessionVariables = {
       EDITOR = "nvim";
+      TERM = "wezterm";
     };
   };
 
@@ -50,3 +81,6 @@ in
     };
   };
 }
+
+
+

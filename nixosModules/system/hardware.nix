@@ -7,10 +7,10 @@
 
   hardware = {
 
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
+
       extraPackages = with pkgs; [
         intel-compute-runtime
         intel-media-driver # LIBVA_DRIVER_NAME=iHD
@@ -29,7 +29,6 @@
         libvdpau-va-gl
       ];
     };
-
 
     nvidia.modesetting.enable = true;
     pulseaudio.enable = false;

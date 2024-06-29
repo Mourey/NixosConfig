@@ -12,7 +12,7 @@
     ./international.nix
     ./linux-kernel.nix
     ./langauge-servers.nix
-    ./mac-random.nix
+    #./mac-random.nix
     ./nvidia.nix
     ./networking.nix
     ./programs.nix
@@ -25,7 +25,7 @@
     ./virtualisation.nix
     ./xdg.nix
     ./screen.nix
-    #./rust.nix
+    ./rust.nix
     ./swap.nix
     ./security-services.nix
     ./terminal-utils.nix

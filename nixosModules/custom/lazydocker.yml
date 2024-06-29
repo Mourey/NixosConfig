@@ -1,0 +1,24 @@
+theme:
+  lightTheme: false 
+  activeBorderColor:
+    - "#a6da95" # Green
+    - bold
+  inactiveBorderColor:
+    - "#cad3f5" # Text
+  optionsTextColor:
+    - "#8aadf4" # Blue
+  selectedLineBgColor:
+    - "#363a4f" # Surface0
+  selectedRangeBgColor:
+    - "#363a4f" # Surface0
+  cherryPickedCommitBgColor:
+    - "#8bd5ca" # Teal
+  cherryPickedCommitFgColor:
+    - "#8aadf4" # Blue
+  unstagedChangesColor:
+    - red       # Red
+customCommands:
+  images:
+    - name: zsh
+      attach: true
+      command: "docker run -it --name arch-x --net host --privileged -e DISPLAY=:0 -v /tmp/.X11-unix:/tmp/.X11-unix -v arch_vol:/data -v home_config:/home/hotrod/.config -v project_data:/home/hotrod/projects {{ .Image.Name }} zsh"
