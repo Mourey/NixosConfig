@@ -8,10 +8,7 @@ let
   gtkrc2 = builtins.readFile ../../nixosModules/custom/gtkrc-2.0;
 
   #icons
-  iconsDir = pkgs.runCommand "icons" { } ''
-    mkdir -p $out
-    cp -r ${./.icons}    $out
-  '';
+  iconsDir = ../../nixosModules/custom/icons;
 in
 {
   imports = [
@@ -53,8 +50,9 @@ in
         text = gtkrc2;
       };
 
+      # Copying Icons In!
       ".icons" = {
-        source = "${iconsDir}/.icons";
+        source = "${iconsDir}";
         recursive = true;
       };
 
