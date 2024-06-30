@@ -1,10 +1,9 @@
-{ inputs, final, prev, lib, specialArgs, config }:
-
+{ inputs }:
+final: prev:
 let
   inherit (final)
     callPackage
-    runCommand
-  ;
+    ;
 in
 {
   # misc

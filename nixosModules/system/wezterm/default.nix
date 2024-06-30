@@ -14,12 +14,15 @@
 , runCommand
 , wezterm-flake
 , naersk
+, pkgs
 }:
 
 let
   date = lib.substring 0 8 wezterm-flake.lastModifiedDate; # YYYYMMDD
   time = lib.substring 8 14 wezterm-flake.lastModifiedDate; # HHMMSS
   rev = lib.substring 0 8 wezterm-flake.rev;
+
+
 in
 naersk.buildPackage rec {
   name = "wezterm";

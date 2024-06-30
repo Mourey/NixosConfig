@@ -72,7 +72,6 @@ in
       libappindicator-gtk3
       libdbusmenu-gtk3
       bash-language-server
-      wezterm
     ];
 
     sessionVariables = {

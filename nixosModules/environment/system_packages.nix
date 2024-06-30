@@ -155,6 +155,7 @@
       cargo
       rustup
       numbat
+      wezterm
 
 
       # Terminal Emulators
