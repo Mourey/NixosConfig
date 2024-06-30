@@ -21,7 +21,17 @@ let
   date = lib.substring 0 8 wezterm-flake.lastModifiedDate; # YYYYMMDD
   time = lib.substring 8 14 wezterm-flake.lastModifiedDate; # HHMMSS
   rev = lib.substring 0 8 wezterm-flake.rev;
+  toolchain = (pkgs.rustChannelOf {
+    rustToolchain = ./rust-toolchain;
+    sha256 = "";
+    #        ^ After you run `nix build`, replace this with the actual
+    #          hash from the error message
+  }).rust;
 
+  naersk' = pkgs.callPackage naersk {
+    cargo = toolchain;
+    rustc = toolchain;
+  };
 
 in
 naersk.buildPackage rec {
