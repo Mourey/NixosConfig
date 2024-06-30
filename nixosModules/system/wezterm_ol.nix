@@ -1,10 +1,10 @@
-{ inputs }:
-final: prev:
+{ inputs, final, prev }:
+
 let
   inherit (final)
     callPackage
     runCommand
-    ;
+  ;
 in
 {
   # misc
@@ -12,5 +12,4 @@ in
     wezterm-flake = inputs.wezterm;
     naersk = callPackage inputs.naersk { };
   };
-
 }
