@@ -1,15 +1,15 @@
-{ ... }:
+{ pkgs, ... }:
 {
   # Set your time zone.
-  time = {
-    timeZone = "Europe/Madrid";
-  };
+  time.timeZone = "Europe/Madrid";
 
   # Select internationalisation properties.
   i18n = {
-
     defaultLocale = "en_US.UTF-8";
-
+    supportedLocales = [
+      "en_US.UTF-8/UTF-8"
+      "es_ES.UTF-8/UTF-8"
+    ];
     extraLocaleSettings = {
       LC_ADDRESS = "es_ES.UTF-8";
       LC_IDENTIFICATION = "es_ES.UTF-8";

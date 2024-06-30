@@ -35,6 +35,7 @@
     ./wasm.nix
     #./vpn.nix
     ./work.nix
+    #./wezterm_ol.nix
     #./yubikey.nix
   ];
 }

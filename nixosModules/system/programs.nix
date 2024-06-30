@@ -7,7 +7,6 @@
       package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     };
 
-
     thunar.enable = true;
     xfconf.enable = true;
     direnv.enable = true;

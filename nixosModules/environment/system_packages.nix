@@ -40,7 +40,8 @@
       direnv
       lazydocker
       clamav
-
+      gnupg
+      pinentry-tty
       # hyprland
       pyprland
       hyprpicker
@@ -71,6 +72,7 @@
       kmon
       dig
       speedtest-rs
+      spotify
 
       libsForQt5.qt5.qtquickcontrols2
       libsForQt5.qt5.qtgraphicaleffects
@@ -157,7 +159,6 @@
 
       # Terminal Emulators
       kitty
-      wezterm
 
       # File Managers
       dolphin

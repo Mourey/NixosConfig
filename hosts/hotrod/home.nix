@@ -9,6 +9,10 @@ let
 
   #icons
   iconsDir = ../../nixosModules/custom/icons;
+
+  # wezterm
+  weztermDir = ../../nixosModules/custom/config/wezterm;
+
 in
 {
   imports = [
@@ -53,6 +57,11 @@ in
       # Copying Icons In!
       ".icons" = {
         source = "${iconsDir}";
+        recursive = true;
+      };
+
+      ".config/wezterm" = {
+        source = "${weztermDir}";
         recursive = true;
       };
 

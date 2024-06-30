@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 
 return {
-  enable_wayland = true;
+  enable_wayland = true,
   color_scheme = 'Catppuccin Macchiato',
   enable_tab_bar = false,
   inactive_pane_hsb = {
@@ -13,14 +13,14 @@ return {
   background = {
     {
       source = {
-        Color="#24273a"
+        Color = "#24273a"
       },
       height = "100%",
       width = "100%",
     },
     {
       source = {
-        File = '/home/xnm/.config/wezterm/lain.gif',
+        File = '/home/hotrod/.config/wezterm/lain.gif',
       },
       opacity = 0.05,
       vertical_align = "Middle",

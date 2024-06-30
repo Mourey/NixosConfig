@@ -1,5 +1,8 @@
 { inputs, pkgs, ... }:
 
+let
+
+in
 {
   # Apply the overlay to the package set
   nixpkgs.overlays = [
