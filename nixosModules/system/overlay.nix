@@ -1,4 +1,4 @@
-{ inputs, final, prev }:
+{ inputs, final, prev, lib, specialArgs, config }:
 
 let
   inherit (final)
