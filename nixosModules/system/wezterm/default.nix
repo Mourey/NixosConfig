@@ -14,7 +14,6 @@
 , runCommand
 , wezterm-flake
 , naersk
-, pkgs
 }:
 
 let

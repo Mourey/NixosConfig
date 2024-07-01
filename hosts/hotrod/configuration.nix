@@ -23,7 +23,6 @@ in
   nixpkgs = {
     overlays = [
       inputs.neorg-overlay.overlays.default
-      (import inputs.nixpkgs-mozilla)
     ];
 
     config = {

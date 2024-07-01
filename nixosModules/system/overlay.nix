@@ -3,7 +3,9 @@ final: prev:
 let
   inherit (final)
     callPackage
+    runCommand
     ;
+
   toolchain = (pkgs.rustChannelOf {
     rustToolchain = ../rust-toolchain.toml;
     sha256 = "";

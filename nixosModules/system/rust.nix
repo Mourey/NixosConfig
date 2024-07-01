@@ -6,8 +6,8 @@ in
   # Apply the overlay to the package set
   nixpkgs.overlays = [
     inputs.rust-overlay.overlays.default
+    (import inputs.nixpkgs-mozilla)
     (import ./overlay.nix { inherit inputs; })
-
   ];
 
   environment.systemPackages = with pkgs; [
