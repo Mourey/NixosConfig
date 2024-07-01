@@ -1,7 +1,5 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 let
-
-
 in
 {
   imports =
@@ -11,7 +9,7 @@ in
       inputs.home-manager.nixosModules.default
     ];
 
-  # nix
+
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
@@ -25,14 +23,14 @@ in
   nixpkgs = {
     overlays = [
       inputs.neorg-overlay.overlays.default
-      inputs.rust-overlay.overlays.default
-      (import ./overlay.nix { inherit inputs; })
-
+      (import inputs.nixpkgs-mozilla)
     ];
 
     config = {
       allowUnfree = true;
     };
   };
+
+
 
 }

@@ -9,12 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    flake-utils.url = "github:numtide/flake-utils";
+
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "flake-utils";
-      };
     };
 
     flake-parts = {
@@ -103,7 +101,11 @@
       flake = false;
     };
 
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs-mozilla = {
+      url = "github:mozilla/nixpkgs-mozilla";
+      flake = false;
+    };
+
 
     naersk = {
       url = "github:nix-community/naersk";
