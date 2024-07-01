@@ -76,7 +76,7 @@ in
 
     sessionVariables = {
       EDITOR = "nvim";
-      TERM = "wezterm";
+      TERM = "kitty";
     };
   };
 

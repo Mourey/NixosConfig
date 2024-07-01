@@ -7,7 +7,7 @@ in
   nixpkgs.overlays = [
     inputs.rust-overlay.overlays.default
     (import inputs.nixpkgs-mozilla)
-    (import ./overlay.nix { inherit inputs; })
+    #(import ./overlay.nix { inherit inputs; })
   ];
 
   environment.systemPackages = with pkgs; [
@@ -30,6 +30,7 @@ in
     cargo-bloat
     cargo-unused-features
     bacon
+    clippy
     evcxr #rust repl
   ];
 }

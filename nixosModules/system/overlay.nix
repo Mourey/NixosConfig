@@ -1,16 +1,14 @@
-{ inputs, pkgs, ... }:
+{ inputs, ... }:
 final: prev:
 let
   inherit (final)
     callPackage
-    runCommand
+    rustChannelOf
     ;
 
-  toolchain = (pkgs.rustChannelOf {
-    rustToolchain = ../rust-toolchain.toml;
-    sha256 = "";
-    # After you run `nix build`, replace this with the actual
-    # hash from the error message
+  toolchain = (rustChannelOf {
+    rustToolchain = ./rust-toolchain.toml;
+    sha256 = "sha256-LyoJhDEuv4dvWL3k6pJtauvANthI2NZ+hVJFr8cYI5A=";
   }).rust;
 
 in

@@ -49,6 +49,8 @@
       hyprlock
       hypridle
       hyprpaper
+      zlib
+      wezterm
 
 
       # some cools stuff
