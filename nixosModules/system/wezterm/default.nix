@@ -22,21 +22,9 @@ let
   time = lib.substring 8 14 wezterm-flake.lastModifiedDate; # HHMMSS
   rev = lib.substring 0 8 wezterm-flake.rev;
 
-  toolchain = (pkgs.rustChannelOf {
-    rustToolchain = ./rust-toolchain.toml;
-    sha256 = "";
-    #        ^ After you run `nix build`, replace this with the actual
-    #          hash from the error message
-  }).rust;
-
-  naersk' = pkgs.callPackage naersk {
-    cargo = toolchain;
-    rustc = toolchain;
-  };
-
 
 in
-naersk'.buildPackage rec {
+naersk.buildPackage rec {
   name = "wezterm";
   # git -c core.abbrev=8 show -s --format=%cd-%h --date=format:%Y%m%d-%H%M%S | wl-copy -n
   version = "${date}-${time}-${rev}";

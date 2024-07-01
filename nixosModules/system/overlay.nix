@@ -1,4 +1,4 @@
-{ inputs, pkgs }:
+{ inputs }:
 final: prev:
 let
   inherit (final)
