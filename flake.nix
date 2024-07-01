@@ -106,20 +106,37 @@
       flake = false;
     };
 
-
     naersk = {
       url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     wezterm = {
-      url = "git+https://github.com/wez/wezterm.git?submodules=1";
+      url = "github:wez/wezterm?submodules=1";
       flake = false;
     };
 
     crane = {
       url = "github:ipetkov/crane";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zlib = {
+      url = "github:madler/zlib/v1.2.11";
+      flake = false;
+    };
+
+    freetype2 = {
+      url = "github:wez/freetype2/e4586d960f339cf75e2e0b34aee30a0ed8353c0d";
+      flake = false;
+    };
+    harfbuzz = {
+      url = "github:harfbuzz/harfbuzz/8.4.0";
+      flake = false;
+    };
+    libpng = {
+      url = "github:glennrp/libpng/8439534daa1d3a5705ba92e653eda9251246dd61";
+      flake = false;
     };
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";

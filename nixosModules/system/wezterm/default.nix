@@ -14,6 +14,8 @@
 , runCommand
 , wezterm-flake
 , naersk
+, python3
+, pkgs
 }:
 
 let
@@ -33,6 +35,9 @@ naersk.buildPackage rec {
   nativeBuildInputs = [
     installShellFiles
     pkg-config
+    ncurses
+    pkg-config
+    python3
   ];
 
   buildInputs = [
@@ -43,6 +48,7 @@ naersk.buildPackage rec {
     wayland
     xcbutil
     xcbutilimage
+    pkgs.zlib
   ];
 
   cargoBuildOptions = x: x ++ [ "--features distro-defaults" ];
