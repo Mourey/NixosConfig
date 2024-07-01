@@ -1,5 +1,7 @@
-{ inputs, pkgs, config, ... }:
+{ inputs, ... }:
 let
+
+
 in
 {
   imports =
@@ -23,6 +25,9 @@ in
   nixpkgs = {
     overlays = [
       inputs.neorg-overlay.overlays.default
+      inputs.rust-overlay.overlays.default
+      (import ./overlay.nix { inherit inputs; })
+
     ];
 
     config = {

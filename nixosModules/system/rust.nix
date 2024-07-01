@@ -3,13 +3,12 @@ let
 
 in
 {
-  # Apply the overlay to the package set
-  nixpkgs.overlays = [
-    inputs.rust-overlay.overlays.default
-    (import ./overlay.nix { inherit inputs; })
-
-  ];
-
+  # # Apply the overlay to the package set
+  # nixpkgs.overlays = [
+  #   inputs.rust-overlay.overlays.default
+  #   (import ./overlay.nix { inherit inputs; })
+  #
+  # ];
   environment.systemPackages = with pkgs; [
     (rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
     lldb_16

@@ -9,7 +9,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    rust-overlay.url = "github:oxalica/rust-overlay";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "flake-utils";
+      };
+    };
 
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
@@ -97,6 +103,8 @@
       flake = false;
     };
 
+    flake-utils.url = "github:numtide/flake-utils";
+
     naersk = {
       url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -115,7 +123,7 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
-  outputs = { self, nixpkgs, home-manager, naersk, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations = {
       "nixos" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -130,9 +138,7 @@
           inputs.nix-index-database.nixosModules.nix-index
         ];
       };
-
       homeManagerModules.default = ./homemanagerModules;
-
     };
 
   };
