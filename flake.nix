@@ -107,6 +107,10 @@
       flake = false;
     };
 
+    crane = {
+      url = "github:ipetkov/crane";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
@@ -130,5 +134,6 @@
       homeManagerModules.default = ./homemanagerModules;
 
     };
+
   };
 }

@@ -178,6 +178,26 @@
         "type": "github"
       }
     },
+    "crane": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719685792,
+        "narHash": "sha256-WIoVERD4AN6CmfGSRPy3mfPx2dDbRHgzP2V8z6aNbaY=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "aa5dcd0518a422dfd545d565f0d5a25971fea52a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -1508,6 +1528,7 @@
         "agenix": "agenix",
         "agenix-rekey": "agenix-rekey",
         "ags": "ags",
+        "crane": "crane",
         "devshell": "devshell_2",
         "disko": "disko",
         "firefox-addons": "firefox-addons",
