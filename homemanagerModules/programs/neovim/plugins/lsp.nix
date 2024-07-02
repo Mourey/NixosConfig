@@ -3,6 +3,7 @@
     plugins = {
       lsp = {
         enable = true;
+        inlayHints = true;
         servers = {
           tsserver.enable = true;
           lua-ls = {
@@ -11,8 +12,8 @@
           };
           rust-analyzer = {
             enable = true;
-            installCargo = true;
-            installRustc = true;
+            installCargo = false;
+            installRustc = false;
           };
           pyright.enable = true;
           nixd.enable = true;
