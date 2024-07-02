@@ -17,6 +17,9 @@
           };
           pyright.enable = true;
           nixd.enable = true;
+          taplo.enable = true;
+          jsonls.enable = true;
+          yamlls.enable = true;
         };
       };
 

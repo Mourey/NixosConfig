@@ -59,6 +59,7 @@
       qutebrowser
       zathura
       imv
+      openssl
 
       # info fetcher
       neofetch
